@@ -19,6 +19,10 @@
       </view>
     </block>
   </view>
+  <view class="bar" hover-class="none" hover-stop-propagation="false">
+    <text class="baritem" selectable="false" space="false" decode="false">沙雕图片</text>
+    <text class="baritem" selectable="false" space="false" decode="false">心情坐标</text>
+  </view>
   <swiper class="shadiaosw" bind:change="imgchange" circular='true' previous-margin='40px' next-margin='40px'>
     <block wx:for="{{shadiaoswdate}}" wx:key="item">
       <swiper-item class="shadiaoctn" item-id="">

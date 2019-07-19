@@ -47,7 +47,15 @@
   width: 160rpx;
   height: 160rpx;
 }
-
+.bar {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.baritem {
+  margin: 10px;
+}
 .swiper {
   width: 100%;
 }
