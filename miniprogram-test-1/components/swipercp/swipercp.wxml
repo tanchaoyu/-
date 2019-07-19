@@ -1,0 +1,7 @@
+<!-- components/swipercp/swipercp.wxml -->
+<view class="contain" hover-class="none" hover-stop-propagation="false">
+    <image class="{{ init == index ? 'active': 'side-image'}}" src="{{imagedate.image}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+    <text class="comment {{ init == index ? 'display': 'disappear'}}" selectable="false" space="false" decode="false">
+        评论：{{imagedate.comment}}
+    </text>
+</view>
