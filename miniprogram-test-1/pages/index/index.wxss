@@ -44,17 +44,30 @@
 }
 
 .pageimage {
-  width: 160rpx;
-  height: 160rpx;
+  width: 70rpx;
+  height: 70rpx;
+  margin: 10px;
+  margin-top: 20px;
 }
 .bar {
   width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
 .baritem {
+  font-size: 32rpx;
+  padding: 2px;
+  border-radius: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 1.5;
   margin: 10px;
+}
+.on {
+  background: #89e996;
+  color: #fff;
 }
 .swiper {
   width: 100%;
@@ -75,4 +88,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.show {
+  display: flex;
+}
+.hide {
+  display: none;
 }

@@ -1,11 +1,11 @@
 <!-- index.wxml -->
 <view class="container">
-  <view class="search-contain" hover-class="none" hover-stop-propagation="false">
+  <!-- <view class="search-contain" hover-class="none" hover-stop-propagation="false">
     <button class="search-btn" bind:tap="searchtap">
       <image class="search-image" src="../../image/search.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
       搜索
     </button>
-  </view>
+  </view> -->
   <swiper class="swiper">
     <swiper-item class="swiper-i" item-id="0">
       <image class="swiper-image" src="../../image/background.png"></image>
@@ -20,14 +20,20 @@
     </block>
   </view>
   <view class="bar" hover-class="none" hover-stop-propagation="false">
-    <text class="baritem" selectable="false" space="false" decode="false">沙雕图片</text>
-    <text class="baritem" selectable="false" space="false" decode="false">心情坐标</text>
+    <block wx:for="{{bardata}}" wx:key="item">
+      <button class="baritem {{item.itemnum==item.on?'on':'side'}}" selectable="false" space="false" decode="false" data-itemnum="{{item.itemnum}}" bind:tap="bartap">
+        {{item.text}}
+      </button>
+    </block>
   </view>
-  <swiper class="shadiaosw" bind:change="imgchange" circular='true' previous-margin='40px' next-margin='40px'>
+  <swiper class="shadiaosw {{show==0?'show':'hide'}}" bind:change="imgchange" circular='true' previous-margin='40px' next-margin='40px'>
     <block wx:for="{{shadiaoswdate}}" wx:key="item">
       <swiper-item class="shadiaoctn" item-id="">
         <swipercp imagedate="{{item}}" class="swipercp"></swipercp>
       </swiper-item>
     </block>
   </swiper>
+  <view class="stream {{show==1?'show':'hide'}}" hover-class="none" hover-stop-propagation="false">
+    text
+  </view>
 </view>
