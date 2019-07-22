@@ -1,0 +1,11 @@
+<!-- components/section/section.wxml -->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <image class="eimg" src="{{userdata.eimg}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+    <text class="etext" selectable="false" space="false" decode="false">{{userdata.etext}}</text>
+    <view class="user" hover-class="none" hover-stop-propagation="false">
+        <image class="userlogo" src="{{userdata.userlogo}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+        <view class="username" selectable="false" space="false" decode="false">
+            {{userdata.username}}
+        </view>
+    </view>
+</view>

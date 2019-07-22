@@ -89,6 +89,16 @@
   justify-content: center;
   align-items: center;
 }
+.stream {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.line {
+  width: 46%;
+  margin: 4px;
+}
 .show {
   display: flex;
 }

@@ -1,0 +1,34 @@
+/* components/section/section.wxss */
+image {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+}
+.user {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.etext {
+  font-size: 14px;
+  margin: 10px;
+}
+.userlogo {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50% 50%;
+  margin: 6px;
+}
+.username {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}

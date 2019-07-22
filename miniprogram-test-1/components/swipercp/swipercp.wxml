@@ -1,6 +1,12 @@
 <!-- components/swipercp/swipercp.wxml -->
 <view class="contain" hover-class="none" hover-stop-propagation="false">
-    <image class="{{ init == index ? 'active': 'side-image'}}" src="{{imagedate.image}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+    <image class="{{ init == index ? 'active': 'side-image'}}" src="{{imagedate.image}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+        <!-- <view class="functn" hover-class="none" hover-stop-propagation="false">
+            <image class="function" src="../../image/heart.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <image class="function" src="../../image/+.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <image class="function" src="../../image/....png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+        </view> -->
+    </image>
     <text class="comment {{ init == index ? 'display': 'disappear'}}" selectable="false" space="false" decode="false">
         评论：{{imagedate.comment}}
     </text>

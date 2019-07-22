@@ -21,9 +21,9 @@
   </view>
   <view class="bar" hover-class="none" hover-stop-propagation="false">
     <block wx:for="{{bardata}}" wx:key="item">
-      <button class="baritem {{item.itemnum==item.on?'on':'side'}}" selectable="false" space="false" decode="false" data-itemnum="{{item.itemnum}}" bind:tap="bartap">
+      <view class="baritem {{item.itemnum==item.on?'on':'side'}}" selectable="false" space="false" decode="false" data-itemnum="{{item.itemnum}}" bind:tap="bartap">
         {{item.text}}
-      </button>
+      </view>
     </block>
   </view>
   <swiper class="shadiaosw {{show==0?'show':'hide'}}" bind:change="imgchange" circular='true' previous-margin='40px' next-margin='40px'>
@@ -34,6 +34,15 @@
     </block>
   </swiper>
   <view class="stream {{show==1?'show':'hide'}}" hover-class="none" hover-stop-propagation="false">
-    text
+    <view class="firstline line" hover-class="none" hover-stop-propagation="false">
+      <block wx:for="{{sectiondata[0]}}" wx:key="item">
+        <section userdata="{{item}}"></section>
+      </block>
+    </view>
+    <view class="secondline line" hover-class="none" hover-stop-propagation="false">
+      <block wx:for="{{sectiondata[1]}}" wx:key="item">
+        <section userdata="{{item}}"></section>
+      </block>
+    </view>
   </view>
 </view>

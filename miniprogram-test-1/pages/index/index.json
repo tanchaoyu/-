@@ -1,6 +1,6 @@
     {
         "usingComponents": {
-            "box": "../../components/box/box",
+            "section": "../../components/section/section",
             "swipercp": "../../components/swipercp/swipercp"
 
         }
