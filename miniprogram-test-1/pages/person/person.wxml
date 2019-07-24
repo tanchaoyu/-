@@ -24,10 +24,4 @@
             </view>
         </block>
     </view>
-    <view class="usermotto">
-        <text class="user-motto">{{motto}}</text>
-    </view>
-    <view>
-        <text>Hello Wechat</text>
-    </view>
 </view>

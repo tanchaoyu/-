@@ -34,23 +34,33 @@ Page({
     shadiaoswdate: [
       {
         image: "../../image/shadiao1.png",
-        comment: "xxxxxxxxxxxx"
+        comment: "xxxxxxxxxxxx",
+        userlogo: "../../image/ting.png",
+        username: "Zhou Yuting"
       },
       {
         image: "../../image/shadiao2.png",
-        comment: "xxxxxxxxxxxx"
+        comment: "xxxxxxxxxxxx",
+        userlogo: "../../image/ting.png",
+        username: "Zhou Yuting"
       },
       {
         image: "../../image/shadiao3.png",
-        comment: "xxxxxxxxxxxx"
+        comment: "xxxxxxxxxxxx",
+        userlogo: "../../image/ting.png",
+        username: "Zhou Yuting"
       },
       {
         image: "../../image/shadiao4.png",
-        comment: "xxxxxxxxxxxx"
+        comment: "xxxxxxxxxxxx",
+        userlogo: "../../image/ting.png",
+        username: "Zhou Yuting"
       },
       {
         image: "../../image/shadiao5.png",
-        comment: "xxxxxxxxxxxx"
+        comment: "xxxxxxxxxxxx",
+        userlogo: "../../image/ting.png",
+        username: "Zhou Yuting"
       }
     ],
     bardata: [

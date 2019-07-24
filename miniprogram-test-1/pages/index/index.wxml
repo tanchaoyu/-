@@ -26,7 +26,7 @@
       </view>
     </block>
   </view>
-  <swiper class="shadiaosw {{show==0?'show':'hide'}}" bind:change="imgchange" circular='true' previous-margin='40px' next-margin='40px'>
+  <swiper class="shadiaosw {{show==0?'show':'hide'}}" bind:change="imgchange" circular='true' previous-margin='120rpx' next-margin='120rpx'>
     <block wx:for="{{shadiaoswdate}}" wx:key="item">
       <swiper-item class="shadiaoctn" item-id="">
         <swipercp imagedate="{{item}}" class="swipercp"></swipercp>

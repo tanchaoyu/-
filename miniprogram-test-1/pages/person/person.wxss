@@ -16,10 +16,6 @@
   color: #aaa;
 }
 
-.usermotto {
-  margin-top: 200px;
-}
-
 .linkctn {
   display: flex;
   justify-content: space-around;
@@ -39,16 +35,17 @@
   height: 200rpx;
 }
 .linktwoctn {
-  width: 90%;
+  width: 100%;
 }
 .linktwo {
-  padding: 10px;
+  padding: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #f0f0f0;
 }
 .row {
-  height: 80rpx;
-  width: 80rpx;
+  height: 60rpx;
+  width: 60rpx;
+  color: #f0f0f0;
 }

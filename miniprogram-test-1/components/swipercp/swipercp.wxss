@@ -1,16 +1,16 @@
 /* components/swipercp/swipercp.wxss */
 .active {
   width: 100%;
-  height: 300rpx;
+  height: 440rpx;
 }
 
 .side-image {
   width: 100%;
-  height: 280rpx;
+  height: 380rpx;
 }
 
 .contain {
-  height: 400rpx;
+  height: 500rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,6 +19,8 @@
 
 .comment {
   width: 100%;
+  height: 40rpx;
+  line-height: 1.5;
 }
 
 .disappear {
@@ -27,8 +29,38 @@
 .functn {
   position: absolute;
   z-index: 5;
+  width: 100%;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .function {
-  width: 32rpx;
-  height: 32rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+.user {
+  position: absolute;
+  margin-top: 140rpx;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.etext {
+  font-size: 14px;
+  margin: 10px;
+}
+.userlogo {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50% 50%;
+  margin: 6px;
+}
+.username {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
 }
