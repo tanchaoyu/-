@@ -28,11 +28,11 @@ Page({
     linktwodata: [
       {
         text: "我的关注",
-        url: "../myfocus/myfocus"
+        url: "../focuslist/focuslist?sign=myfocus"
       },
       {
         text: "关注我的",
-        url: "../focusmy/focusmy"
+        url: "../focuslist/focuslist?sign=focusmy"
       },
       {
         text: "关于我们",
@@ -121,6 +121,9 @@ Page({
   },
   linkchange: function(e) {
     let url = e.currentTarget.dataset.url;
+    let sign;
+    console.log(e.currentTarget);
+
     console.log(url);
     wx.navigateTo({
       url: url

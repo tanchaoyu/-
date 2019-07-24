@@ -15,7 +15,8 @@
     "pages/myfocus/myfocus",
     "pages/focusmy/focusmy",
     "pages/aboutus/aboutus",
-    "pages/intruduce/intruduce"
+    "pages/intruduce/intruduce",
+    "pages/focuslist/focuslist"
   ],
   "window": {
     "backgroundTextStyle": "light",

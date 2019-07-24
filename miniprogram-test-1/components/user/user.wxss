@@ -1,0 +1,19 @@
+.user {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.userlogo {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50% 50%;
+  margin: 6px;
+}
+.username {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+} /* components/user/user.wxss */

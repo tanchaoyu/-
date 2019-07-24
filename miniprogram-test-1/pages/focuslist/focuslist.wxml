@@ -1,0 +1,13 @@
+<!-- pages/focuslist/focuslist.wxml -->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <view class="myfocus userbox" hover-class="none" hover-stop-propagation="false" wx:if="{{sign =='myfocus'}}">
+        <block wx:for="{{myfocusdata}}" wx:key="item">
+            <user class="user" userdata="{{item}}"></user>
+        </block>
+    </view>
+    <view class="focusmy userbox" hover-class="none" hover-stop-propagation="false" wx:elif="{{sign =='focusmy'}}">
+        <block wx:for="{{focusmydata}}" wx:key="item">
+            <user class="user" userdata="{{item}}"></user>
+        </block>
+    </view>
+</view>

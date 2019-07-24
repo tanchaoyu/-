@@ -1,0 +1,7 @@
+/* pages/focuslist/focuslist.wxss */
+.user {
+  width: 100%;
+}
+.userbox {
+  width: 100%;
+}
