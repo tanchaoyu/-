@@ -1,1 +1,13 @@
 /* pages/myinfo/myinfo.wxss */
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.reply {
+  margin: 40rpx;
+  width: 90%;
+  background: #f0f0f0;
+}

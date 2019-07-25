@@ -1,0 +1,10 @@
+/* components/reply/reply.wxss */
+.container {
+  width: 90%;
+  margin: 20rpx;
+}
+.time {
+  font-size: 24rpx;
+  justify-self: flex-end;
+  align-self: flex-end;
+}

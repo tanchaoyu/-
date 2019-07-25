@@ -1,2 +1,6 @@
-<!--pages/myinfo/myinfo.wxml-->
-<text>pages/myinfo/myinfo.wxml</text>
+<!-- pages/myinfo/myinfo.wxml -->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <block wx:for="{{infodata}}" wx:key="item">
+        <reply replydata="{{item}}" class="reply"></reply>
+    </block>
+</view>

@@ -15,5 +15,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 36rpx;
 } /* components/user/user.wxss */
