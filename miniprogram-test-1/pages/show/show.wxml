@@ -1,0 +1,13 @@
+<!-- pages/show/show.wxml -->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <view class="show" hover-class="none" hover-stop-propagation="false">
+        <user userdata="{{showdata.user}}"></user>
+        <view class="" hover-class="none" hover-stop-propagation="false">{{showdata.etext}}</view>
+        <image class="{{showdata.eimg == false ?'none':'eimg'}}" src="{{showdata.eimg == false?'':showdata.eimg}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+    </view>
+    <view class="floor" hover-class="none" hover-stop-propagation="false">
+        <block wx:for="{{floordata}}" wx:key="{{item}}">
+            <floor floordata="{{item}}"></floor>
+        </block>
+    </view>
+</view>

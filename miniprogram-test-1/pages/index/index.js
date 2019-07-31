@@ -35,32 +35,42 @@ Page({
       {
         image: "../../image/shadiao1.png",
         comment: "xxxxxxxxxxxx",
-        userlogo: "../../image/ting.png",
-        username: "Zhou Yuting"
+        user: {
+          userlogo: "../../image/ting.png",
+          username: "Zhou Yuting"
+        }
       },
       {
         image: "../../image/shadiao2.png",
         comment: "xxxxxxxxxxxx",
-        userlogo: "../../image/ting.png",
-        username: "Zhou Yuting"
+        user: {
+          userlogo: "../../image/ting.png",
+          username: "Zhou Yuting"
+        }
       },
       {
         image: "../../image/shadiao3.png",
         comment: "xxxxxxxxxxxx",
-        userlogo: "../../image/ting.png",
-        username: "Zhou Yuting"
+        user: {
+          userlogo: "../../image/ting.png",
+          username: "Zhou Yuting"
+        }
       },
       {
         image: "../../image/shadiao4.png",
         comment: "xxxxxxxxxxxx",
-        userlogo: "../../image/ting.png",
-        username: "Zhou Yuting"
+        user: {
+          userlogo: "../../image/ting.png",
+          username: "Zhou Yuting"
+        }
       },
       {
         image: "../../image/shadiao5.png",
         comment: "xxxxxxxxxxxx",
-        userlogo: "../../image/ting.png",
-        username: "Zhou Yuting"
+        user: {
+          userlogo: "../../image/ting.png",
+          username: "Zhou Yuting"
+        }
       }
     ],
     bardata: [
@@ -83,8 +93,10 @@ Page({
         {
           eimg: "../../image/ting.png",
           etext: "A beautiful girl called yuting",
-          userlogo: "../../image/ting.png",
-          username: "Zhou Yuting"
+          user: {
+            userlogo: "../../image/ting.png",
+            username: "Zhou Yuting"
+          }
         }
       ],
       /**
@@ -94,8 +106,10 @@ Page({
         {
           eimg: "../../image/ting2.png",
           etext: "A beautiful girl called liting",
-          userlogo: "../../image/ting2.png",
-          username: "Zhu Liting"
+          user: {
+            userlogo: "../../image/ting2.png",
+            username: "Zhu Liting"
+          }
         }
       ]
     ]

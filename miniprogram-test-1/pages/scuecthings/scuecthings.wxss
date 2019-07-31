@@ -1,1 +1,12 @@
 /* pages/scuecthings/scuecthings.wxss */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.section {
+  width: 300rpx;
+  margin: 20rpx;
+}

@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "user": "../../components/user/user"
+    "comment": "../../components/comment/comment"
   }
 }

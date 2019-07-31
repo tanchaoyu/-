@@ -1,0 +1,11 @@
+/* pages/show/show.wxss */
+.show {
+  width: 90%;
+  min-height: 200px;
+}
+.floor {
+  width: 80%;
+}
+.none {
+  display: none;
+}

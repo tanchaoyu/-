@@ -1,0 +1,10 @@
+/* components/floor/floor.wxss */
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: #f0f0f0 2px dashed;
+}
+.comment {
+  width: 100%;
+}

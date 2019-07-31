@@ -1,2 +1,6 @@
-<!--pages/scuecthings/scuecthings.wxml-->
-<text>pages/scuecthings/scuecthings.wxml</text>
+<!-- pages/scuecthings/scuecthings.wxml -->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <block wx:for="{{thingsdata}}" wx:key="item">
+        <section userdata="{{item}}" class="section" bind:tap="toshow" data-set="{{item}}"></section>
+    </block>
+</view>
