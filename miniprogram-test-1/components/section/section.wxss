@@ -26,3 +26,12 @@ image {
 .none {
   display: none;
 }
+.express {
+  border-radius: 10px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+.express .eimg {
+  width: 90%;
+}

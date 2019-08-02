@@ -23,8 +23,8 @@ Page({
             username: "Zhu Liting",
             userlogo: "./../image/ting2.png"
           },
-          time: "123",
-          text: "456",
+          time: "2019.7.31",
+          text: "哈哈哈哈哈哈哈哈哈哈哈哈",
           reply: false
         },
         {
@@ -37,7 +37,7 @@ Page({
             userlogo: "./../image/ting2.png"
           },
           time: "123",
-          text: "456",
+          text: "哈哈哈哈哈哈哈哈哈哈哈哈",
           reply: true
         }
       ],

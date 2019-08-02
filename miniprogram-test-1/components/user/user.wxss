@@ -17,3 +17,10 @@
   align-items: center;
   font-size: 24rpx;
 } /* components/user/user.wxss */
+.mid {
+  font-size: 30rpx;
+}
+.mid .userlogo {
+  width: 80rpx;
+  height: 80rpx;
+}

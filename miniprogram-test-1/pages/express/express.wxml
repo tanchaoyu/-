@@ -1,2 +1,16 @@
-<!--pages/express/express.wxml-->
-<text>pages/express/express.wxml</text>
+<!-- pages/express/express.wxml -->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <view class="heartctn" hover-class="none" hover-stop-propagation="false">
+        <view class="heartbtn" hover-class="none" hover-stop-propagation="false">
+            <image class="heart" src="../../image/heart4.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <view class="heartx" hover-class="none" hover-stop-propagation="false">告白Ta</view>
+        </view>
+        <view class="heartbtn" hover-class="none" hover-stop-propagation="false">
+            <image class="heart" src="../../image/heart3.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <view class="heartx" hover-class="none" hover-stop-propagation="false">海底捞</view>
+        </view>
+    </view>
+    <view class="sectionbox" hover-class="none" hover-stop-propagation="false" bind:touchstart="touchstart" bind:touchmove="touchmove" animation="{{animation}}">
+        <section display="express" userdata="{{expressdata[0]}}" class="section"></section>
+    </view>
+</view>

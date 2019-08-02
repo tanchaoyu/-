@@ -7,6 +7,10 @@ Component({
     userdata: {
       type: Object,
       value: ""
+    },
+    display: {
+      type: String,
+      value: ""
     }
   },
 

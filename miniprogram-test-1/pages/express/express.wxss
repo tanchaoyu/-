@@ -1,1 +1,29 @@
 /* pages/express/express.wxss */
+.container {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.heartctn {
+  display: flex;
+}
+.heartbtn {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heart {
+  width: 200rpx;
+  height: 200rpx;
+}
+.heartx {
+  position: absolute;
+}
+.sectionbox {
+  width: 80%;
+}
+
+.section {
+  width: 80%;
+}
