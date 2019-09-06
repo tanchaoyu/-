@@ -33,5 +33,6 @@ image {
   justify-content: space-around;
 }
 .express .eimg {
-  width: 90%;
+  width: 540rpx;
+  height: 540rpx;
 }

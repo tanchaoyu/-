@@ -33,7 +33,7 @@ Page({
     ],
     shadiaoswdate: [
       {
-        image: "../../image/shadiao1.png",
+        eimg: "../../image/shadiao1.png",
         comment: "xxxxxxxxxxxx",
         user: {
           userlogo: "../../image/ting.png",
@@ -41,7 +41,7 @@ Page({
         }
       },
       {
-        image: "../../image/shadiao2.png",
+        eimg: "../../image/shadiao2.png",
         comment: "xxxxxxxxxxxx",
         user: {
           userlogo: "../../image/ting.png",
@@ -49,7 +49,7 @@ Page({
         }
       },
       {
-        image: "../../image/shadiao3.png",
+        eimg: "../../image/shadiao3.png",
         comment: "xxxxxxxxxxxx",
         user: {
           userlogo: "../../image/ting.png",
@@ -57,7 +57,7 @@ Page({
         }
       },
       {
-        image: "../../image/shadiao4.png",
+        eimg: "../../image/shadiao4.png",
         comment: "xxxxxxxxxxxx",
         user: {
           userlogo: "../../image/ting.png",
@@ -65,7 +65,7 @@ Page({
         }
       },
       {
-        image: "../../image/shadiao5.png",
+        eimg: "../../image/shadiao5.png",
         comment: "xxxxxxxxxxxx",
         user: {
           userlogo: "../../image/ting.png",
@@ -175,5 +175,12 @@ Page({
       });
       point++;
     }
+  },
+  toshow: function(event) {
+    console.log(event.currentTarget.dataset.set);
+    let json = JSON.stringify(event.currentTarget.dataset.set);
+    wx.navigateTo({
+      url: "../show/show?value=" + json
+    });
   }
 });

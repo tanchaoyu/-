@@ -1,16 +1,29 @@
 <!-- pages/express/express.wxml -->
 <view class="container" hover-class="none" hover-stop-propagation="false">
     <view class="heartctn" hover-class="none" hover-stop-propagation="false">
-        <view class="heartbtn" hover-class="none" hover-stop-propagation="false">
-            <image class="heart" src="../../image/heart4.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
-            <view class="heartx" hover-class="none" hover-stop-propagation="false">告白Ta</view>
+        <block wx:for="{{bardata}}" wx:key="item">
+            <view class="heartbtn {{item.itemnum==item.on?'on':'side'}}" hover-class="none" hover-stop-propagation="false" data-itemnum="{{item.itemnum}}" bind:tap="hearttap">
+                <image class="heart" src="{{item.src}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+                <view class="heartx" hover-class="none" hover-stop-propagation="false">
+                    {{item.text}}
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class="gaobaita {{show==0?'show':'none'}}" hover-class="none" hover-stop-propagation="false">
+        <view class="sectionbox " hover-class="none" hover-stop-propagation="false" bind:touchstart="touchstart" bind:touchmove="touchmove" bind:touchend="touchend" animation="{{animation}}">
+            <section display="express" userdata="{{expressdata[eindex]}}" class="section"></section>
         </view>
-        <view class="heartbtn" hover-class="none" hover-stop-propagation="false">
-            <image class="heart" src="../../image/heart3.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
-            <view class="heartx" hover-class="none" hover-stop-propagation="false">海底捞</view>
+        <view class="sectionbox hid" hover-class="none" hover-stop-propagation="false">
+            <section display="express" userdata="{{expressdata[eindex+1]}}" class="section"></section>
         </view>
     </view>
-    <view class="sectionbox" hover-class="none" hover-stop-propagation="false" bind:touchstart="touchstart" bind:touchmove="touchmove" animation="{{animation}}">
-        <section display="express" userdata="{{expressdata[0]}}" class="section"></section>
+    <view class="haidilao {{show==1?'show':'none'}}" hover-class="none" hover-stop-propagation="false">
+        <view class="sectionbox " hover-class="none" hover-stop-propagation="false" bind:touchstart="touchstart" bind:touchmove="touchmove" bind:touchend="touchend" animation="{{animation}}">
+            <section display="express" userdata="{{haidilaodata[hindex]}}" bind:tap="toshow" data-set="{{haidilaodata[hindex]}}" class="section"></section>
+        </view>
+        <view class="sectionbox hid" hover-class="none" hover-stop-propagation="false">
+            <section display="express" userdata="{{haidilaodata[hindex+1]}}" class="section" data-set="{{haidilaodata[hindex+1]}}"></section>
+        </view>
     </view>
 </view>

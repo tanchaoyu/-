@@ -1,6 +1,6 @@
 <!-- components/swipercp/swipercp.wxml -->
 <view class="contain" hover-class="none" hover-stop-propagation="false">
-    <image class="{{ init == index ? 'active': 'side-image'}}" src="{{imagedate.image}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+    <image class="{{ init == index ? 'active': 'side-image'}}" src="{{imagedate.eimg}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
     <view class="functn {{ init == index ? 'display': 'disappear'}}" hover-class="none" hover-stop-propagation="false">
         <image class="function" src="../../image/heart.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
         <image class="function" src="../../image/+.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>

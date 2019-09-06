@@ -29,19 +29,19 @@
   <swiper class="shadiaosw {{show==0?'show':'hide'}}" bind:change="imgchange" circular='true' previous-margin='120rpx' next-margin='120rpx'>
     <block wx:for="{{shadiaoswdate}}" wx:key="item">
       <swiper-item class="shadiaoctn" item-id="">
-        <swipercp imagedate="{{item}}" class="swipercp"></swipercp>
+        <swipercp imagedate="{{item}}" class="swipercp" bind:tap="toshow" data-set="{{item}}"></swipercp>
       </swiper-item>
     </block>
   </swiper>
   <view class="stream {{show==1?'show':'hide'}}" hover-class="none" hover-stop-propagation="false">
     <view class="firstline line" hover-class="none" hover-stop-propagation="false">
       <block wx:for="{{sectiondata[0]}}" wx:key="item">
-        <section userdata="{{item}}"></section>
+        <section userdata="{{item}}" bind:tap="toshow" data-set="{{item}}"></section>
       </block>
     </view>
     <view class="secondline line" hover-class="none" hover-stop-propagation="false">
       <block wx:for="{{sectiondata[1]}}" wx:key="item">
-        <section userdata="{{item}}"></section>
+        <section userdata="{{item}}" bind:tap="toshow" data-set="{{item}}"></section>
       </block>
     </view>
   </view>
