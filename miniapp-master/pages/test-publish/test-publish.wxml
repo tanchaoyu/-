@@ -1,0 +1,74 @@
+<view class="containor">
+  <view class="publish_text_area">
+    <!-- 标题 -->
+    <!-- <view class="text_area_title">
+      <input 
+        class="title_input" 
+        placeholder="请输入标题" 
+        maxlength="25" 
+        placeholder-style="color:#b3b3b3;font-size:16px;" 
+        bindinput="handleTitleInput"
+        value="{{title}}"
+      ></input> -->
+      <!-- 标题字数限制 -->  
+      <!-- <view 
+        class="{{ titleCount < 25 ? 'title_input_counter' : 'title_input_error_counter' }}"
+      >{{titleCount}}/25</view>
+    </view> -->
+    <!-- 内容 -->
+    <view class="text_area_content">
+      <view class="area_content">
+        <view class="area_content_out">
+          <textarea 
+            class="content-textarea" 
+            placeholder="给你的沙雕图片加点料" 
+            maxlength="50" 
+            placeholder-style="color:#b3b3b3;font-size:12px;"
+            style="height: 8rem" 
+            bindinput="handleContentInput" 
+            value="{{content}}"
+          />
+          <!-- 字数限制 -->  
+          <view class="{{ contentCount < 50 ? 'content_textarea_counter' : 'content_textarea_error_counter'}}">{{contentCount}}/50</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="publish_imgs_area">
+    <!-- 图片 -->
+    <view class="imgs_area" wx:for="{{images}}" wx:key="*this">
+      <view class="iamge_item">
+        <image 
+          class="iamge_content" 
+          src="{{item}}" 
+          data-id="{{index}}"
+          mode="aspectFill" 
+          bindtap="previewIamge"
+        />
+        <image 
+          class="iamge_cancel" 
+          src="./images/cancel.png" 
+          mode="aspectFill" 
+          data-id="{{index}}"
+          bindtap="deleteImage"
+        />
+      </view>
+    </view>
+    
+    <!-- 图片上传图片按钮 -->
+    <view class="imgs_area" bindtap="chooseImage" wx:if="{{images.length < 9 && video == ''}}">
+      <view class="iamge_item">
+        <image class="iamge_content" src="../../image/add.png" mode="aspectFill" />
+      </view>
+    </view>
+  </view>
+  <view class="btn_all_area">
+    <button
+      class="btn_area"
+      type="primary"
+      bindtap="submitClick"
+    >提交</button>
+  </view>
+</view>
+

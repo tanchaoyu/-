@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/shadiao-publish/shadiao-publish",
+    "pages/test-publish/test-publish",
+    "pages/emotion/emotion",
+    "pages/plus/plus",
+    "pages/test/test",
+    "pages/test_1/test_1",
+    "pages/test_2/test_2",
+    "pages/post/post",
+    "pages/comment/comment",
+    "pages/shadiao/shadiao",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/person/person",
+    "pages/scuecthings/scuecthings",
+    "pages/express/express",
+    "pages/search/search",
+    "pages/myindex/myindex",
+    "pages/myinfo/myinfo",
+    "pages/mycollect/mycollect",
+    "pages/myfocus/myfocus",
+    "pages/focusmy/focusmy",
+    "pages/aboutus/aboutus",
+    "pages/intruduce/intruduce"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "解忧杂货铺",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "",
+        "iconPath": "image/house.png",
+        "selectedIconPath": "image/onhouse.png"
+      },
+      {
+        "pagePath": "pages/plus/plus",
+        "text": "",
+        "iconPath": "image/plus.png",
+        "selectedIconPath": "image/plus.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "",
+        "iconPath": "image/person.png",
+        "selectedIconPath": "image/onperson.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {}
+}

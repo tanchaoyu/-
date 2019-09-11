@@ -1,0 +1,10 @@
+<!-- components/user/user.wxml -->
+<view class="user {{size}}" hover-class="none" hover-stop-propagation="false">
+    <image class="userlogo" src="{{userdata.userlogo}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+    <view class="username" selectable="false" space="false" decode="false">
+        {{userdata.username}}
+    </view>
+    <view class="usertime" selectable="false" space="false" decode="false">
+        {{userdata.usertime}}
+    </view>
+</view>

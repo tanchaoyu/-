@@ -1,0 +1,10 @@
+<!-- components/reply/reply.wxml -->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <user userdata="{{replydata.user}}"></user>
+    <view class="time" hover-class="none" hover-stop-propagation="false">{{replydata.time}}</view>
+    <view class="" hover-class="none" hover-stop-propagation="false" wx:if="{{replydata.reply}}">
+        {{reply}}
+    </view>
+    <view class="" hover-class="none" hover-stop-propagation="false" wx:else>{{comment}}</view>
+    <view class="text" hover-class="none" hover-stop-propagation="false">{{replydata.text}}</view>
+</view>

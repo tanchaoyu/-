@@ -1,0 +1,253 @@
+.body-main-box {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+} 
+
+.body-swiper {
+  width: 640rpx;
+  height: 800rpx;
+  left: 50%;
+  position: absolute;
+  margin-left: -315rpx;
+  margin-top: 20rpx;
+  z-index: 3;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  border-radius: 12px;
+}
+
+.body-swiper2 {
+  width: 600rpx;
+  height: 800rpx;
+  left: 50%;
+  position: absolute;
+  margin-left: -295rpx;
+  z-index: 2;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  border-radius: 12px;
+}
+
+.body-swiper3 {
+  width: 565rpx;
+  height: 800rpx;
+  left: 50%;
+  position: absolute;
+  margin-left: -277.5rpx;
+  margin-top: -20rpx;
+  z-index: 1;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.62), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  border-radius: 12px;
+}
+
+.body-container {
+  width: 100%;
+  height: 800rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.weui-grids {
+  position: relative;
+  overflow: hidden;
+  margin-left: 45rpx;
+  margin-top: 20rpx;
+}
+
+.weui-grids:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.weui-grids:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+
+.weui-grid {
+  position: relative;
+  float: left;
+  width: 32%;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}
+
+.weui-grid:before {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  color: #d9d9d9;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+
+.weui-grid:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.weui-grid:active {
+  background-color: #ececec;
+}
+
+.weui-grid__icon {
+  width: 170rpx;
+  height: 160rpx;
+}
+
+.weui-grid__icon image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.weui-grid__icon + .weui-grid__label {
+  margin-top: 5px;
+}
+
+.words {
+  width: 560rpx;
+  font-size: 25rpx;
+}
+
+.user {
+  display: block;
+  /* margin-top: 30rpx; */
+}
+
+.show {
+  width: 90%;
+  min-height: 200px;
+}
+
+.attention {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+  align-items: center;
+}
+
+.btn {
+  height: 50rpx;
+  width: 18%;
+  line-height: 50rpx;
+  background-color: #5fdbff;
+  color: #fff;
+  font-size: 24rpx;
+  border-radius: 20px;
+  margin-left: 280rpx;
+}
+
+.btn::after {
+  border: 0;
+}
+/* reply */
+.reply{
+  width: 100%;
+  position: absolute;
+  top:930rpx;
+  margin-left: 100rpx;
+}
+.floor {
+  width: 80%;
+}
+.none {
+  display: none;
+}
+
+/*整体样式，就是黑色的容器*/
+.comment_release{
+  display: flex;
+  align-items: flex-end; 
+  justify-content: space-between; 
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding:10rpx 0 10rpx 10rpx;
+  background-color: #ffffff;
+  font-size: 12px;
+  z-index: 999;
+  border-top: 1px solid #bcbcbc;
+}
+
+/*输入框*/
+.comment_release .text{
+  width: 60%;
+  min-height: 17rpx;
+  max-height: 51rpx; /*最多显示三行*/
+  line-height: 17rpx;
+  font-size: 22rpx;
+  padding: 15rpx 0 15rpx 15rpx;
+  background-color: #f4f1f1;
+  border-radius: 5px;
+}
+
+/*表情图标*/
+.comment_release .emoji{
+  width: 24px;
+  height: 24px;
+  line-height: 27px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+/*发送按钮*/
+.comment_release .submit{ 
+  width: 60px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  margin-right: 10px;
+  background-color: #4B5CD7;
+  color: #ffffff;
+  font-size: 12px;
+}
+ 
+
+ .collect{
+   width: 50rpx;
+   height: 50rpx;
+ }

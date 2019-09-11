@@ -1,0 +1,6 @@
+<!-- components/section/section.wxml -->
+<view class="container {{display}}" hover-class="none" hover-stop-propagation="false">
+    <image class="{{userdata.eimg == false ?'none':'eimg'}}" src="{{userdata.eimg == false?'':userdata.eimg}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+    <text class="etext" selectable="false" space="false" decode="false">{{userdata.etext}}</text>
+    <user userdata="{{userdata.user}}" size="mid"></user>
+</view>

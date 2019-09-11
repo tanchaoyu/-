@@ -1,0 +1,95 @@
+<view class="body-main-box">
+  <!-- 第一张 --> 
+  <view class="body-swiper" bindtouchstart="touchstart1" bindtouchend="touchend1" style="z-index:{{index1}};top:{{ballTop1}}rpx;  margin-left:{{ballLeft1}}rpx;width:{{ballWidth1}}rpx;" animation="{{animationData1}}">
+    <view class="body-container">
+      <view class="container">
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for="{{routers}}" wx:key="item">
+            <view class="weui-grid__icon">
+              <image src="{{item.image}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+            </view>
+          </view>
+          <view class='words'>
+            <text>{{textdate}}</text>
+          </view>
+          <view class='attention'>
+            <user class='user' userdata="{{showdata.user}}"></user>
+            <!--修改背景颜色无效-->
+            <button class='btn' bindtap='sumbit'>关注</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 第二张 -->
+  <view class="body-swiper2" bindtouchstart="touchstart2" bindtouchend="touchend2" style="z-index:{{index2}};top:{{ballTop2}}rpx;margin-left:{{ballLeft2}}rpx;width:{{ballWidth2}}rpx;" animation="{{animationData2}}">
+    <view class="body-container">
+      <view class="container">
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for="{{routers}}" wx:key="item">
+            <view class="weui-grid__icon">
+              <image src="{{item.image}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+            </view>
+          </view>
+          <view class='words'>
+            <text>{{textdate}}</text>
+          </view>
+          <view class='attention'>
+            <user class='user' userdata="{{showdata.user}}"></user>
+            <!--修改背景颜色无效-->
+            <button class='btn' bindtap='sumbit'>关注</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 第三张 -->
+  <view class="body-swiper3" bindtouchstart="touchstart3" bindtouchend="touchend3" style="z-index:{{index3}};top:{{ballTop3}}rpx;  margin-left:{{ballLeft3}}rpx;width:{{ballWidth3}}rpx;" animation="{{animationData3}}">
+    <view class="body-container">
+      <view class="container">
+        <view class="weui-grids">
+          <view class="weui-grid" wx:for="{{routers}}" wx:key="item">
+            <view class="weui-grid__icon">
+              <image src="{{item.image}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+            </view>
+          </view>
+          <view class='words'>
+            <text>{{textdate}}</text>
+          </view>
+          <view class='attention'>
+            <user class='user' userdata="{{showdata.user}}"></user>
+            <!--修改背景颜色无效-->
+            <button class='btn' bindtap='sumbit'>关注</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- reply -->
+  <view class="reply" hover-class="none" hover-stop-propagation="false">
+    <view class="floor" hover-class="none" hover-stop-propagation="false">
+      <block wx:for="{{floordata}}" wx:key="{{item}}">
+        <floor floordata="{{item}}"></floor>
+      </block>
+    </view>
+  </view>
+  <!-- <view class="tool">
+    <view class="tool-item" catchtap='Up' id="{{detail.id}}">
+      <image src="/images/like.png" />
+    </view>
+    <view class="tool-item" catchtap='Comment' id="{{detail.id}}">
+      <image bindtap="bindReply" src="/images/comment.png"></image>
+    </view>
+  </view> -->
+
+
+  <view class="comment_release">
+      <textarea class="text" placeholder-class="weui-input" fixed="true" maxlength="-1" show-confirm-bar="false" cursor-spacing="15" auto-height="true" bindtap="bindReply" focus="{{releaseFocus}}" placeholder="评论" />
+    <image class='collect' src="../../image/collect.png"  />
+    <!-- <image class='collect' src="../../image/collected.png" /> -->
+    <image class='collect' src="../../image/like.png" />
+    <image class='collect' src="../../image/transmit.png" />
+    <!-- <button form-type="submit" class="submit">发送</button> -->
+  </view>
+</view>

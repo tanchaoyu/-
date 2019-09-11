@@ -1,0 +1,50 @@
+<!--pages/plus/plus.wxml-->
+<view>
+  <!-- 头部 -->
+  <!-- <view>
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        获取头像昵称
+      </button>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+  </view> -->
+
+  <!-- 主要部分 -->
+  <view>
+    <view class='publish'>
+      <!-- 内容 -->
+      <view class="text_area_content">
+        <view class="area_content">
+          <view class="area_content_out">
+            <textarea class="content-textarea" placeholder="给你的沙雕图片加点料" maxlength="50" placeholder-style="color:#888888;font-size:12px;" style="height: 6rem" bindinput="handleContentInput" value="{{content}}" />
+            <!-- 字数限制 -->
+            <!-- <view class="{{ contentCount < 255 ? 'content_textarea_counter' : 'content_textarea_error_counter'}}">{{contentCount}}/255</view> -->
+
+          </view>
+        </view>
+      </view>
+      <view class="publish_imgs_area">
+        <!-- 图片 -->
+        <view class="imgs_area" wx:for="{{images}}" wx:key="*this">
+          <view class="iamge_item">
+            <image class="iamge_content" src="{{item}}" data-id="{{index}}" mode="aspectFill" bindtap="previewIamge" />
+            <image class="iamge_cancel" src="./images/cancel.png" mode="aspectFill" data-id="{{index}}" bindtap="deleteImage" />
+          </view>
+        </view>
+        <!-- 图片上传图片按钮 -->
+        <view class="imgs_area" bindtap="chooseImage" wx:if="{{images.length < 9 && video == ''}}">
+          <view class="iamge_item">
+            <image class="iamge_content" src="../../image/add.png" mode="aspectFill" />
+          </view>
+        </view>
+      </view>
+      <view class="btn_all_area">
+        <button class="btn_area" bindtap="submitClick" style='background:url(../../image/publish.png) no-repeat;'></button>
+      </view>
+    </view>
+  </view>
+</view>

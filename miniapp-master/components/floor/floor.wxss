@@ -1,0 +1,12 @@
+/* components/floor/floor.wxss */
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.comment {
+  display: flex;
+  width: 100%;
+}

@@ -1,0 +1,7 @@
+    {
+        "usingComponents": {
+            "box": "../../components/box/box",
+            "swipercp": "../../components/swipercp/swipercp"
+
+        }
+    }

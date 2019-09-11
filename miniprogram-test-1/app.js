@@ -47,6 +47,7 @@ App({
 
                 success: res => {
                   console.log(res);
+                  this.globalData.app_token = res.data.app_token;
                 }
               });
 
@@ -66,6 +67,7 @@ App({
     apiUrl: "/api/jyzhp/v1.0",
     userInfo: null,
     signature: null,
-    code: null
+    code: null,
+    app_token: null
   }
 });

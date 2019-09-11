@@ -1,0 +1,52 @@
+<view class="containor">
+  <view class="publish_text_area">
+    <!-- 标题 -->
+    <view class="text_area_title">
+      <input class="title_input" placeholder="请输入标题" maxlength="25" placeholder-style="color:#b3b3b3;font-size:16px;" bindinput="handleTitleInput" value="{{title}}"></input>
+      <!-- 标题字数限制 -->
+      <view class="{{ titleCount < 25 ? 'title_input_counter' : 'title_input_error_counter' }}">{{titleCount}}/25</view>
+    </view>
+    <!-- 内容 -->
+    <view class="text_area_content">
+      <view class="area_content">
+        <view class="area_content_out">
+          <textarea class="content-textarea" placeholder="请输入正文内容..." maxlength="255" placeholder-style="color:#b3b3b3;font-size:12px;" style="height: 8rem" bindinput="handleContentInput" value="{{content}}" />
+          <!-- 字数限制 -->
+          <view class="{{ contentCount < 255 ? 'content_textarea_counter' : 'content_textarea_error_counter'}}">{{contentCount}}/255</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="publish_imgs_area">
+    <!-- 图片 -->
+    <view class="imgs_area" wx:for="{{images}}" wx:key="*this">
+      <view class="iamge_item">
+        <image class="iamge_content" src="{{item}}" data-id="{{index}}" mode="aspectFill" bindtap="previewIamge" />
+        <image class="iamge_cancel" src="./images/cancel.png" mode="aspectFill" data-id="{{index}}" bindtap="deleteImage" />
+      </view>
+    </view>
+    <!-- 视频 -->
+    <view class="video_area" wx:if="{{video != ''}}">
+      <video class="video_item" src="{{video}}" controls></video>
+      <!-- 防止视频组件层级太高，导致部分机型覆盖悬浮按钮 -->
+      <cover-image class="video_delete" src="./images/video_del.png" mode="aspectFill" bindtap="videoDelete" />
+    </view>
+    <!-- 图片上传图片按钮 -->
+    <view class="imgs_area" bindtap="chooseImage" wx:if="{{images.length < 9 && video == ''}}">
+      <view class="iamge_item">
+        <image class="iamge_content" src="../../image/pictureorvideo.png" mode="aspectFill" />
+      </view>
+    </view>
+    <!-- 视频上传图片按钮 -->
+    <view class="imgs_area" bindtap="chooseVideo" wx:if="{{video == '' &&  images.length == 0}}">
+      <!-- <view class="iamge_item">
+        <image class="iamge_content" src="./images/video.png" mode="aspectFill" />
+      </view> -->
+    </view>
+  </view>
+  <view class="btn_all_area">
+    <button class="btn_area" type="primary" bindtap="submitClick">提交</button>
+    <button class="btn_area" type="warn" bindtap="resetClick">重置</button>
+  </view>
+</view>

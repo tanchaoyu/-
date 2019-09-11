@@ -1,0 +1,6 @@
+<!-- components/floor/floor.wxml -->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <block wx:for="{{floordata}}" wx:key="{{item}}">
+        <comment commentdata="{{item}}" class="comment"></comment>
+    </block>
+</view> 

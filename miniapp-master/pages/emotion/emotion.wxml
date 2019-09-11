@@ -1,0 +1,35 @@
+<!--pages/emotion/emotion.wxml-->
+<!-- bar -->
+<view class="bar" hover-class="none" hover-stop-propagation="false">
+  <block wx:for="{{bardata}}" wx:key="item">
+    <view class="baritem {{item.itemnum==item.on?'on':'side'}}" selectable="false" space="false" decode="false" data-itemnum="{{item.itemnum}}" bind:tap="bartap">
+      {{item.text}}
+    </view>
+  </block>
+</view>
+<!-- 树洞哇 -->
+<view class="stream {{show==0?'show':'hide'}}" hover-class="none" hover-stop-propagation="true">
+  <view class="firstline line" hover-class="none" hover-stop-propagation="false">
+    <block wx:for="{{sectiondata[0]}}" wx:key="item">
+      <section userdata="{{item}}"></section>
+    </block>
+  </view>
+  <view class="secondline line" hover-class="none" hover-stop-propagation="false">
+    <block wx:for="{{sectiondata[1]}}" wx:key="item">
+      <section userdata="{{item}}"></section>
+    </block>
+  </view>
+</view>
+<!-- 吐槽吧 -->
+<view class="stream {{show==1?'show':'hide'}}" hover-class="none" hover-stop-propagation="false">
+  <view class="firstline line" hover-class="none" hover-stop-propagation="false">
+    <block wx:for="{{sectiondata[0]}}" wx:key="item">
+      <section userdata="{{item}}"></section>
+    </block>
+  </view>
+  <view class="secondline line" hover-class="none" hover-stop-propagation="false">
+    <block wx:for="{{sectiondata[1]}}" wx:key="item">
+      <section userdata="{{item}}"></section>
+    </block>
+  </view>
+</view>

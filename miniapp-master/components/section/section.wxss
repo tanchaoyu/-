@@ -1,0 +1,37 @@
+/* components/section/section.wxss */
+image {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  min-height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0f0f0;
+}
+.user {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.etext {
+  font-size: 14px;
+  margin: 10px;
+}
+
+.none {
+  display: none;
+}
+.express {
+  border-radius: 10px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+.express .eimg {
+  width: 90%;
+}

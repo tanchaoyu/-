@@ -1,4 +1,7 @@
 // pages/scuecthings/scuecthings.js
+
+import tool from "../../static/js/tool.js";
+const app = getApp();
 Page({
   /**
    * 页面的初始数据
@@ -35,7 +38,9 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {},
+  onLoad: function(options) {
+    tool.getData("xuanShang", 1, 1, "/talk/list");
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

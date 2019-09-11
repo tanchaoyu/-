@@ -1,0 +1,34 @@
+.user {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.usertime{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-left: -120rpx;
+  margin-top: 40rpx;
+  font-size: 22rpx;
+  color: #888888;
+}
+.userlogo {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50% 50%;
+  margin: 4px;
+}
+.username {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+} /* components/user/user.wxss */
+.mid {
+  font-size: 30rpx;
+}
+.mid .userlogo {
+  width: 80rpx;
+  height: 80rpx;
+}

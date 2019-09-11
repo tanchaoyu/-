@@ -1,0 +1,20 @@
+<!-- components/comment/comment.wxml -->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <view class="user reply" hover-class="none" hover-stop-propagation="false" wx:if="{{commentdata.reply}}">
+        <user userdata="{{commentdata.user}}" class="use"></user>
+        回复
+        <user userdata="{{commentdata.user}}" class="use"></user>
+    </view>
+    <view class="user " hover-class="none" hover-stop-propagation="false" wx:else>
+        <user userdata="{{commentdata.user}}"></user>
+    </view> 
+    <view class="comment" hover-class="none" hover-stop-propagation="false">
+        {{commentdata.text}}
+    </view>
+    <view class="box" hover-class="none" hover-stop-propagation="false">
+        <view class="time" hover-class="none" hover-stop-propagation="false">
+            {{commentdata.time}}
+        </view>
+        <view class="re" hover-class="none" hover-stop-propagation="false">回复</view>
+    </view>
+</view>

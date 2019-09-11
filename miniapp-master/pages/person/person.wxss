@@ -1,0 +1,54 @@
+/* pages/person/person.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.linkctn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.link {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkimage {
+  width: 200rpx;
+  height: 200rpx;
+}
+.linktwoctn {
+  width: 90%;
+}
+.linktwo {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.row {
+  height: 80rpx;
+  width: 80rpx;
+}

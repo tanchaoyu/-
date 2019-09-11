@@ -1,0 +1,80 @@
+/* pages/shadiao-publish/shadiao-publish.wxss */
+
+.publish {
+  margin: 10rpx 20rpx;
+}
+
+.words {
+  font-size: 12px;
+  color: #888;
+}
+
+/* 图片部分 */
+
+.publish_imgs_area {
+  width: 500rpx;
+  height: 500rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  border-radius: 15rpx;
+  padding-left: 8rpx;
+  padding-top: 8rpx;
+  padding-bottom: 8rpx;
+}
+
+.iamge_item {
+  width: 225rpx;
+  height: 225rpx;
+  padding: 4rpx;
+}
+
+.iamge_content {
+  width: 223rpx;
+  height: 223rpx;
+  border-radius: 30rpx;
+  border: 1px solid #f1efef;
+}
+
+.iamge_cancel {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  position: relative;
+  top: -259rpx;
+  right: -204rpx;
+  z-index: 800;
+}
+
+.btn_all_area {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20rpx 20rpx 6rpx 20rpx;
+  border-radius: 15rpx;
+  /* position: absolute;
+    bottom: 0; */
+}
+
+/* 消除按钮默认样式 */
+
+button::after {
+  border: none;
+}
+ 
+input {
+  outline: none;
+  border: none;
+  list-style: none;
+}
+
+.btn_area {
+  width: 688rpx;
+  height: 96rpx;
+  margin-top: 20rpx;
+  margin-left: 45rpx;
+  text-align: center;
+}

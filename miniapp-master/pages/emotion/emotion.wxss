@@ -1,0 +1,41 @@
+/* pages/emotion/emotion.wxss */ 
+
+.bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rpx;
+}
+
+.baritem {
+  font-size: 32rpx;
+  padding: 4rpx;
+  border-radius: 24rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  line-height: 1.5;
+  margin: 20rpx;
+}
+
+.on {
+  background: #89e996;
+  color: #fff;
+}
+
+.stream {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.line {
+  width: 46%;
+  margin: 8rpx;
+}
+.show {
+  display: flex;
+}
+.hide {
+  display: none;
+}

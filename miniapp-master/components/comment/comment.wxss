@@ -1,0 +1,41 @@
+/* components/comment/comment.wxss */
+.container {
+  width: 100%;
+  font-size: 24rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.user {
+  display: flex;
+}
+.use { 
+  margin-right: 4rpx;
+}
+.reply {
+  width: 100%;
+  font-size: 24rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.box {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+.comment {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+}
+.time{
+  margin-left: 25rpx;
+  font-size: 22rpx;
+  color: #888888;
+}
+.re{
+  font-size: 22rpx;
+  color: #888888;
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "沙雕一日笑",
+  "usingComponents": {
+    "user": "../../components/user/user",
+    "floor": "../../components/floor/floor"
+  }
+}

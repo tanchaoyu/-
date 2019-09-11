@@ -1,0 +1,78 @@
+/**index.wxss**/
+
+.search-contain {
+  height: 30px;
+  width: 100%;
+}
+
+.search-image {
+  width: 20px;
+  height: 20px;
+}
+
+.search-text {
+  height: 30px;
+}
+
+.search-btn {
+  width: 90%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageslogoctn {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo-contain {
+  width: 100%;
+  display: flex;
+}
+
+.pagelogo {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.pageimage {
+  width: 160rpx;
+  height: 160rpx;
+}
+.bar {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.baritem {
+  margin: 10px;
+}
+.swiper {
+  width: 100%;
+}
+
+.shadiaoctn {
+  width: 100%;
+}
+
+.swiper-image {
+  width: 100%;
+  height: 100%;
+}
+
+.shadiaosw {
+  width: 70%;
+  height: 400rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

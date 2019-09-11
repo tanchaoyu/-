@@ -1,0 +1,103 @@
+
+<view class="fixed-page">
+  <view class="fixed-cont-body">
+    <!-- 播放器 -->
+    <view class="swiper_container">
+      <view wx:for="{{video}}" wx:key="item" class="player">
+        <video src="{{item.tempFileURL}}" controls></video>
+      </view>
+    </view>
+    <scroll-view wx:for="{{video}}"  wx:key="item" scroll-y="true" class="important">
+      <view>
+        <!-- 诗词信息 -->
+        <view class="author-box row">
+          <view class="title">题目:</view>
+          <view class="author">{{item.title}}</view>
+        </view>
+        <!-- 详情描述 -->
+        <view class="discription-box row">
+          <view class="title">作者:</view>
+          <view class="discription">{{item.author}}</view>
+        </view>
+      </view>
+ 
+ 
+      <!-- 图文信息 -->
+      <view wx:if="{{comments.length>0}}" class="photo_info_box">
+        <!-- 图文评论列表 -->
+        <view class="photo_comment_box">
+          <text class="photo_comment_title">最新评论</text>
+          <view wx:for="{{comments}}" wx:for-item="comment" wx:key="index" class="commment_list">
+            <!-- index < 3 在视频下面只显示三条记录 -->
+            <view wx:if="{{index < 3}}">
+              <view class="comment_info">
+                <view class="c_info_view">
+                  <image src="{{comment.userImage}}"></image>
+                  <text>{{comment.userName}}</text>
+                </view>
+                <text class="c_date_txt">{{comment.commitTime}}</text>
+              </view>
+              <view class="comment_content">{{comment.content}}</view>
+            </view>
+          </view>
+ 
+          <!-- 查看更多评论 -->
+          <view bindtap="toggleDialogHandle">
+            <view class="load_more_box">查看更多评论</view>
+          </view>
+        </view>
+      </view>
+      <view wx:else class="no_comment">
+        <text class="load_more_box">暂时没有评论！</text>
+      </view>
+    </scroll-view>
+  </view>
+ 
+  <!-- 评论 -->
+  <view class="comment_fixed_footer">
+    <view class="footer_oper_box">
+      <button open-type="share" class="btn">
+        <image src="../../image/shadiao5.png"></image>
+        <text>分享</text>
+      </button>
+ 
+      <view class="footer_c">
+        <view wx:if="{{collectByMp3IdAndUId.length>0}}">
+        <image catchtap='_onCollectTap' src="{{isCollected?'../../image/shadiao1.png':'../../image/shadiao2.png'}}"></image>
+        </view>
+        <view wx:elif="{{collectByMp3IdAndUId.length==0}}">
+        <image catchtap="onCollectTap" src="{{isCollected?'../../image/shadiao2.png':'../../image/shadiao1.png'}}"></image>
+         </view>
+        <text>收藏</text>
+      </view>
+    </view>
+ 
+    <navigator url="/pages/comment-more/comment-more" open-type="redirect" hover-class="none">
+      <view class="post_comment_button">
+        <image src="../../image/shadiao3.png"></image>
+        <text>评论</text>
+      </view>
+    </navigator>
+  </view>
+ 
+  <!-- 弹出层 -->
+  <view class="cover_box" wx:if="{{showDialog}}" bindtap="toggleDialogHandle"></view>
+  <view class="overlay_box" wx:if="{{showDialog}}">
+    <view class="overlay_title">
+      <text>评论</text>
+      <image class="close_btn" src="../../image/shadiao3.png" mode="aspectFill" bindtap="toggleDialogHandle"></image>
+    </view>
+    <view wx:for="{{comments}}" wx:for-item="comment">
+      <view class="comment_info">
+        <view class="c_info_view">
+          <image src="{{comment.userImage}}"></image>
+          <text>{{comment.userName}}</text>
+        </view>
+        <text class="c_date_txt">{{comment.commitTime}}</text>
+      </view>
+      <view class="comment_content">{{comment.content}}</view>
+    </view>
+ 
+  </view>
+ 
+</view>

@@ -1,0 +1,33 @@
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <view class="userinfo">
+        <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+            获取头像昵称
+        </button>
+        <block wx:else>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+    </view>
+    <view class="linkctn" hover-class="none" hover-stop-propagation="false">
+        <block wx:for="{{linkdate}}" wx:key="item">
+            <view class="link" hover-class="none" hover-stop-propagation="false" data-url="{{item.url}}" bind:tap="linkchange">
+                <image class="linkimage" src="{{item.image}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+                {{item.text}}
+            </view>
+        </block>
+    </view>
+    <view class="linktwoctn" hover-class="none" hover-stop-propagation="false">
+        <block wx:for="{{linktwodata}}" wx:key="item">
+            <view class="linktwo" hover-class="none" hover-stop-propagation="false" data-url="{{item.url}}" bind:tap="linkchange">
+                {{item.text}}
+                <image class="row" src="../../image/row.png" mode="aspectFit" lazy-load="false" binderror="" bindload=""></image>
+            </view>
+        </block>
+    </view>
+    <view class="usermotto">
+        <text class="user-motto">{{motto}}</text>
+    </view>
+    <view>
+        <text>Hello Wechat</text>
+    </view>
+</view>

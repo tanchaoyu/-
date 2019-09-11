@@ -1,3 +1,4 @@
+const app = getApp();
 /*函数节流*/
 function throttle(fn, interval) {
   var enterTime = 0; //触发的时间
@@ -11,6 +12,28 @@ function throttle(fn, interval) {
     }
   };
 }
+function getData(talk_type, sort, page, url) {
+  let res;
+  wx.request({
+    method: "get",
+    header: {
+      "content-type": "application/x-www-form-urlencoded" // 默认值
+    },
+    url: app.globalData.baseUrl + app.globalData.apiUrl + url,
+
+    data: {
+      talk_type: talk_type,
+      sort: sort,
+      page: page
+    },
+    success: res => {
+      console.log(res);
+      res = res;
+    }
+  });
+  return res;
+}
 export default {
-  throttle
+  throttle,
+  getData
 };

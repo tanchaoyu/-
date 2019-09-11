@@ -1,0 +1,25 @@
+<!--components/box/box.wxml-->
+<view class="contain" hover-class="none" hover-stop-propagation="false">
+    <button class="obser" size="default" type="obser" plain="default" disabled="false" loading="false" 
+        hover-class="button-hover" hover-stop-propagation="false" 
+         form-type="submit|reset" open-type="contact|share|getUserInfo|openSetting|feedback" bind:tap="obsertap">
+        {{msg}}
+    </button>
+    <image class="image" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" bind:tap="move">
+        
+    </image>
+    <view class="timebox" hover-class="none" hover-stop-propagation="false">
+        {{time}}
+    </view>
+    <text class="section" selectable="false" space="false" decode="false">
+        {{section}}
+    </text>
+    <view class="infomation" hover-class="none" hover-stop-propagation="false">
+        <image class="userlogo" src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+            
+        </image>
+        <text class="username" selectable="false" space="false" decode="false">
+            {{username}}
+        </text>
+    </view>
+</view>
