@@ -13,25 +13,26 @@ function throttle(fn, interval) {
   };
 }
 function getData(talk_type, sort, page, url) {
-  let res;
-  wx.request({
-    method: "get",
-    header: {
-      "content-type": "application/x-www-form-urlencoded" // 默认值
-    },
-    url: app.globalData.baseUrl + app.globalData.apiUrl + url,
+  return new Promise(function(resolve, reject) {
+    wx.request({
+      method: "get",
+      header: {
+        "content-type": "application/x-www-form-urlencoded" // 默认值
+      },
+      url: app.globalData.baseUrl + app.globalData.apiUrl + url,
 
-    data: {
-      talk_type: talk_type,
-      sort: sort,
-      page: page
-    },
-    success: res => {
-      console.log(res);
-      res = res;
-    }
+      data: {
+        talk_type: talk_type,
+        sort: sort,
+        page: page
+      },
+      success: res => {
+        console.log(res);
+
+        resolve(res);
+      }
+    });
   });
-  return res;
 }
 export default {
   throttle,

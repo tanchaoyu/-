@@ -1,4 +1,11 @@
 /* pages/show/show.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 50rpx;
+}
 .show {
   width: 90%;
   min-height: 200px;
@@ -8,4 +15,14 @@
 }
 .none {
   display: none;
+}
+.commentinput {
+  width: 90%;
+  height: 60rpx;
+  background: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  border-radius: 20rpx;
+}
+.input-placeholder {
+  text-align: center;
 }

@@ -4,9 +4,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    value: "说点什么",
     showdata: {
       etext: "",
       eimg: "",
+      talk_id: "",
+      user_id: "",
+      push_time: "",
       user: {
         userlogo: "",
         username: ""

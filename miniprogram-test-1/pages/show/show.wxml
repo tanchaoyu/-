@@ -5,6 +5,7 @@
         <view class="" hover-class="none" hover-stop-propagation="false">{{showdata.etext}}</view>
         <image class="{{showdata.eimg == false ?'none':'eimg'}}" src="{{showdata.eimg == false?'':showdata.eimg}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
     </view>
+    <input class="commentinput" value="" type="text|number|idcard|digit|time|date" password="false" placeholder="{{value}}" placeholder-style="" placeholder-class="input-placeholder" disabled="false" maxlength="140" focus="false" bindinput="" bindfocus="" bindblur="" bindconfirm=""></input>
     <view class="floor" hover-class="none" hover-stop-propagation="false">
         <block wx:for="{{floordata}}" wx:key="{{item}}">
             <floor floordata="{{item}}"></floor>

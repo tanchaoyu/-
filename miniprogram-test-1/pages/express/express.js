@@ -1,5 +1,6 @@
 // pages/express/express.js
 import tool from "../../static/js/tool.js";
+const app = getApp();
 Page({
   /**
    * 页面的初始数据
@@ -213,7 +214,35 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {},
+  onLoad: function(options) {
+    let that = this;
+    let res = tool.getData("biaoBai", 1, 1, "/talk/list");
+    tool.getData("haiDiLao", 1, 1, "/talk/list");
+    res.then(function(res) {
+      console.log(res);
+      let list = res.data.list;
+      console.log(list);
+      for (let item of list) {
+        let data = new Object({
+          eimg: app.globalData.baseUrl + item.images[0].path,
+          etext: item.content,
+          user: {
+            username: item.user.nickName,
+            userlogo: item.user.avatarUrl
+          },
+          push_time: item.push_time,
+          user_id: item.user.user_id,
+          talk_id: item.talk_id
+        });
+        console.log(data);
+        that.data.expressdata.push(data);
+        that.setData({
+          expressdata: that.data.expressdata
+        });
+      }
+      console.log(that.data.expressdata);
+    });
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
