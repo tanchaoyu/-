@@ -1,2 +1,2 @@
-<!--pages/myindex/myindex.wxml-->
-<text>pages/myindex/myindex.wxml</text>
+<!-- pages/myindex/myindex.wxml -->
+<view class="container" hover-class="none" hover-stop-propagation="false"></view>

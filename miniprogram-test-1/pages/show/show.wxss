@@ -16,13 +16,29 @@
 .none {
   display: none;
 }
-.commentinput {
+.summitcomment {
   width: 90%;
-  height: 60rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 1.5;
   background: #f0f0f0;
   border: 1px solid #f0f0f0;
   border-radius: 20rpx;
 }
+.summitinput {
+  margin: 0;
+}
 .input-placeholder {
   text-align: center;
+}
+.summit {
+  margin: 0;
+  line-height: 1.5;
+  padding: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }

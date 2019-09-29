@@ -34,7 +34,68 @@ function getData(talk_type, sort, page, url) {
     });
   });
 }
+/**
+ * 发布一级评论
+ * @param {string} app_token
+ * @param {string} talk_type
+ * @param {string} talk_id
+ * @param {string} content
+ * @param {string} url
+ */
+function send(app_token, talk_type, talk_id, content, url) {
+  return new Promise(function(resolve, reject) {
+    wx.request({
+      method: "post",
+      header: {
+        "content-type": "application/x-www-form-urlencoded" // 默认值
+      },
+      url: app.globalData.baseUrl + app.globalData.apiUrl + url,
+
+      data: {
+        talk_type: talk_type,
+        app_token: app_token,
+        talk_id: talk_id,
+        content: content
+      },
+      success: res => {
+        console.log(res);
+
+        resolve(res);
+      }
+    });
+  });
+}
+/**
+ *
+ * @param {string} talk_type
+ * @param {string} talk_id
+ * @param {string} url /comment
+ */
+function getcomment(talk_type, talk_id, url) {
+  return new Promise(function(resolve, reject) {
+    wx.request({
+      method: "get",
+      header: {
+        "content-type": "application/x-www-form-urlencoded" // 默认值
+      },
+      url: app.globalData.baseUrl + app.globalData.apiUrl + url,
+
+      data: {
+        talk_type: talk_type,
+
+        talk_id: talk_id
+      },
+      success: res => {
+        console.log(res);
+
+        resolve(res);
+      }
+    });
+  });
+}
 export default {
   throttle,
-  getData
+  getData,
+  send,
+  getcomment
 };

@@ -56,7 +56,8 @@ Page({
           },
           push_time: item.push_time,
           user_id: item.user.user_id,
-          talk_id: item.talk_id
+          talk_id: item.talk_id,
+          talk_type: item.talk_type
         });
         console.log(data);
         that.data.thingsdata.push(data);
