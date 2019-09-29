@@ -11,8 +11,8 @@
         <button class="summit" bind:tap="summittap">发送</button>
     </view>
     <view class="floor" hover-class="none" hover-stop-propagation="false">
-        <block wx:for="{{floordata}}" wx:key="{{item}}">
-            <floor floordata="{{item}}"></floor>
+        <block wx:for="{{commentdata}}" wx:key="{{item}}">
+            <comment commentdata="{{item}}"></comment>
         </block>
     </view>
 </view>

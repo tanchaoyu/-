@@ -23,63 +23,33 @@ Page({
         username: ""
       }
     },
-    floordata: [
-      [
-        {
-          user: {
-            username: "Zhu Liting",
-            userlogo: "../../image/ting2.png"
-          },
-          targetuser: {
-            username: "Zhu Liting",
-            userlogo: "./../image/ting2.png"
-          },
-          time: "2019.7.31",
-          text: "哈哈哈哈哈哈哈哈哈哈哈哈",
-          reply: false
+    commentdata: [
+      {
+        user: {
+          username: "Zhu Liting",
+          userlogo: "../../image/ting2.png"
         },
-        {
-          user: {
-            username: "Zhu Liting",
-            userlogo: "../../image/ting2.png"
-          },
-          targetuser: {
-            username: "Zhu Liting",
-            userlogo: "./../image/ting2.png"
-          },
-          time: "123",
-          text: "哈哈哈哈哈哈哈哈哈哈哈哈",
-          reply: true
-        }
-      ],
-      [
-        {
-          user: {
-            username: "Zhu Liting",
-            userlogo: "../../image/ting2.png"
-          },
-          targetuser: {
-            username: "Zhu Liting",
-            userlogo: "./../image/ting2.png"
-          },
-          time: "123",
-          text: "456",
-          reply: false
+        targetuser: {
+          username: "Zhu Liting",
+          userlogo: "./../image/ting2.png"
         },
-        {
-          user: {
-            username: "Zhu Liting",
-            userlogo: "../../image/ting2.png"
-          },
-          targetuser: {
-            username: "Zhu Liting",
-            userlogo: "./../image/ting2.png"
-          },
-          time: "123",
-          text: "456",
-          reply: true
-        }
-      ]
+        time: "2019.7.31",
+        text: "哈哈哈哈哈哈哈哈哈哈哈哈",
+        reply: false
+      },
+      {
+        user: {
+          username: "Zhu Liting",
+          userlogo: "../../image/ting2.png"
+        },
+        targetuser: {
+          username: "Zhu Liting",
+          userlogo: "./../image/ting2.png"
+        },
+        time: "123",
+        text: "456",
+        reply: false
+      }
     ]
   },
   /**
@@ -91,6 +61,8 @@ Page({
         username: obj.user.nickName,
         userlogo: obj.user.avatarUrl
       },
+      talk_type: this.data.showdata.talk_type,
+      talk_id: this.data.showdata.talk_id,
       time: obj.push_time,
       user_id: obj.user.user_id,
       comment_id: obj.comment_id,
@@ -151,12 +123,12 @@ Page({
       let list = res.data;
       for (let item of list) {
         let obj = that.commentchange(item);
-        that.data.floordata.push(obj);
+        that.data.commentdata.push(obj);
       }
       that.setData({
-        floordata: that.data.floordata
+        commentdata: that.data.commentdata
       });
-      console.log(that.data.floordata);
+      console.log(that.data.commentdata);
     });
   },
 

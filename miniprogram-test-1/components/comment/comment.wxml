@@ -1,11 +1,6 @@
 <!-- components/comment/comment.wxml -->
 <view class="container" hover-class="none" hover-stop-propagation="false">
-    <view class="user reply" hover-class="none" hover-stop-propagation="false" wx:if="{{commentdata.reply}}">
-        <user userdata="{{commentdata.user}}" class="use"></user>
-        回复
-        <user userdata="{{commentdata.user}}" class="use"></user>
-    </view>
-    <view class="user " hover-class="none" hover-stop-propagation="false" wx:else>
+    <view class="user " hover-class="none" hover-stop-propagation="false">
         <user userdata="{{commentdata.user}}"></user>
     </view>
     <view class="comment" hover-class="none" hover-stop-propagation="false">

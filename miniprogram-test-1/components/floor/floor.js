@@ -5,8 +5,8 @@ Component({
    */
   properties: {
     floordata: {
-      type: Array,
-      value: []
+      type: Object,
+      value: {}
     }
   },
 

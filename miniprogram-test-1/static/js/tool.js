@@ -65,8 +65,41 @@ function send(app_token, talk_type, talk_id, content, url) {
     });
   });
 }
+function replycomment(
+  app_token,
+  talk_type,
+  talk_id,
+  comment_id,
+  to_user,
+  content,
+  url
+) {
+  return new Promise(function(resolve, reject) {
+    wx.request({
+      method: "post",
+      header: {
+        "content-type": "application/x-www-form-urlencoded" // 默认值
+      },
+      url: app.globalData.baseUrl + app.globalData.apiUrl + url,
+
+      data: {
+        talk_type: talk_type,
+        app_token: app_token,
+        comment_id: comment_id,
+        to_user: to_user,
+        talk_id: talk_id,
+        content: content
+      },
+      success: res => {
+        console.log(res);
+
+        resolve(res);
+      }
+    });
+  });
+}
 /**
- *
+ *获取评论
  * @param {string} talk_type
  * @param {string} talk_id
  * @param {string} url /comment
@@ -82,7 +115,6 @@ function getcomment(talk_type, talk_id, url) {
 
       data: {
         talk_type: talk_type,
-
         talk_id: talk_id
       },
       success: res => {
@@ -97,5 +129,6 @@ export default {
   throttle,
   getData,
   send,
+  replycomment,
   getcomment
 };

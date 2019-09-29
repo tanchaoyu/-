@@ -1,4 +1,6 @@
 // components/comment/comment.js
+import tool from "../../static/js/tool.js";
+const app = getApp();
 Component({
   /**
    * 组件的属性列表
@@ -6,7 +8,7 @@ Component({
   properties: {
     commentdata: {
       type: Object,
-      value: ""
+      value: {}
     }
   },
 
@@ -18,5 +20,13 @@ Component({
   /**
    * 组件的方法列表
    */
-  methods: {}
+  methods: {
+    reply: function() {
+      let that = this;
+      let reply = tool.replycomment(
+        app.globalData.app_token,
+        that.properties.commentdata.tlak_type
+      );
+    }
+  }
 });
