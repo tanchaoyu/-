@@ -12,7 +12,7 @@
     </view>
     <view class="floor" hover-class="none" hover-stop-propagation="false">
         <block wx:for="{{commentdata}}" wx:key="{{item}}">
-            <comment commentdata="{{item}}"></comment>
+            <comment commentdata="{{item}}" bind:replytap="buttontap"></comment>
         </block>
     </view>
 </view>

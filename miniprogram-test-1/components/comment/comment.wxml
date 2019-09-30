@@ -10,6 +10,8 @@
         <view class="time" hover-class="none" hover-stop-propagation="false">
             {{commentdata.time}}
         </view>
-        <view class="re" hover-class="none" hover-stop-propagation="false">回复</view>
+        <view class="re" hover-class="none" hover-stop-propagation="false" bind:tap="getuserFun">
+            回复
+        </view>
     </view>
 </view>
