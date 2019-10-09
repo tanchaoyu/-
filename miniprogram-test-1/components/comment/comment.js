@@ -43,8 +43,9 @@ Component({
     /**
      * 调用页面的函数
      */
-    getuserFun: function() {
+    getuserFun: function(e) {
       let obj = {};
+      this.triggerEvent("opensecondComment", obj);
       this.triggerEvent("replytap", obj);
     }
   }

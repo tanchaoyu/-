@@ -10,6 +10,7 @@ Page({
     focus: false,
     showsummit: false,
     showbutton: true,
+    secondComment: false,
     comment: "",
     showdata: {
       etext: "",
@@ -55,6 +56,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  opensecondComment: function() {
+    this.setData({
+      secondComment: true
+    });
+  },
   commentchange: function(obj) {
     let data = new Object({
       user: {
@@ -94,16 +100,19 @@ Page({
     console.log(this.data.comment);
 
     let that = this;
-    let send = tool.send(
-      app.globalData.app_token,
-      that.data.showdata.talk_type,
-      that.data.showdata.talk_id,
-      that.data.comment,
-      "/comment"
-    );
-    send.then(function(res) {
-      console.log(res);
-    });
+    if (this.data.secondComment) {
+    } else {
+      let send = tool.send(
+        app.globalData.app_token,
+        that.data.showdata.talk_type,
+        that.data.showdata.talk_id,
+        that.data.comment,
+        "/comment"
+      );
+      send.then(function(res) {
+        console.log(res);
+      });
+    }
   },
   onLoad: function(options) {
     console.log(options);
