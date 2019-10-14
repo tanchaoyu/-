@@ -4,6 +4,8 @@ const app = getApp();
 Page({
   /**
    * 页面的初始数据
+   * 数据说明
+   * @param {Object} {user:{username,userlogo},talk_type,talk_id,time,user_id,comment_id,text}
    */
   data: {
     value: "说点什么",
@@ -11,6 +13,7 @@ Page({
     showsummit: false,
     showbutton: true,
     secondComment: false,
+    selectID: "",
     comment: "",
     showdata: {
       etext: "",
@@ -51,7 +54,8 @@ Page({
         text: "456",
         reply: false
       }
-    ]
+    ],
+    replycomment: {}
   },
   /**
    * 生命周期函数--监听页面加载
@@ -77,21 +81,32 @@ Page({
     });
     return data;
   },
-  buttontap: function() {
+  buttontap: function(e) {
+    console.log(e.detail);
+
     this.setData({
       showsummit: true,
       showbutton: false,
       focus: true
     });
+    /**
+     * 对组件传回来的数据进行赋值，请求时使用
+     */
+    this.setData({
+      replycomment: e.detail
+    });
+    console.log(this.data.replycomment);
   },
   inputending: function(e) {
     console.log(e.detail);
+    this.setData({
+      comment: e.detail.value
+    });
     setTimeout(() => {
       this.setData({
         showsummit: false,
         showbutton: true,
-        focus: false,
-        comment: e.detail.value
+        focus: false
       });
     }, 1000);
   },
@@ -100,19 +115,39 @@ Page({
     console.log(this.data.comment);
 
     let that = this;
-    if (this.data.secondComment) {
-    } else {
-      let send = tool.send(
-        app.globalData.app_token,
-        that.data.showdata.talk_type,
-        that.data.showdata.talk_id,
-        that.data.comment,
-        "/comment"
-      );
-      send.then(function(res) {
-        console.log(res);
-      });
-    }
+    console.log(that.data.secondComment);
+
+    /**
+     * setData需要时间相应，故设定时器
+     * 判断发送一级或二级评论
+     */
+    setTimeout(() => {
+      if (that.data.secondComment) {
+        let send = tool.replycomment(
+          app.globalData.app_token,
+          that.data.showdata.talk_type,
+          that.data.showdata.talk_id,
+          that.data.replycomment.comment_id,
+          JSON.stringify(that.data.replycomment.to_user),
+          that.data.comment,
+          "/comment/reply"
+        );
+        send.then(function(res) {
+          console.log(res);
+        });
+      } else {
+        let send = tool.send(
+          app.globalData.app_token,
+          that.data.showdata.talk_type,
+          that.data.showdata.talk_id,
+          that.data.comment,
+          "/comment"
+        );
+        send.then(function(res) {
+          console.log(res);
+        });
+      }
+    }, 500);
   },
   onLoad: function(options) {
     console.log(options);
@@ -122,6 +157,8 @@ Page({
     this.setData({
       showdata: showdata
     });
+    console.log(that.data.showdata);
+
     let comments = tool.getcomment(
       this.data.showdata.talk_type,
       this.data.showdata.talk_id,

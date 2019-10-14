@@ -15,9 +15,7 @@ Component({
   /**
    * 组件的初始数据
    */
-  data: {
-    content: ""
-  },
+  data: {},
 
   /**
    * 组件的方法列表
@@ -44,9 +42,21 @@ Component({
      * 调用页面的函数
      */
     getuserFun: function(e) {
-      let obj = {};
-      this.triggerEvent("opensecondComment", obj);
-      this.triggerEvent("replytap", obj);
+      let that = this;
+      console.log(that.properties.commentdata);
+
+      let userdata = new Object({
+        user_id: that.properties.commentdata.user_id,
+        nickName: that.properties.commentdata.user.username,
+        avatarUrl: that.properties.commentdata.user.userlogo
+      });
+
+      let senddata = new Object({
+        comment_id: that.properties.commentdata.comment_id,
+        to_user: userdata
+      });
+      this.triggerEvent("opensecondComment");
+      this.triggerEvent("replytap", senddata);
     }
   }
 });
